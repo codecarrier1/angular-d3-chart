@@ -6,8 +6,8 @@
 npm version>6
 
 #Installation
-npm install
-npm start
+<p> npm install </p> <br>
+<p> npm start </p>
 
 #Deployment
 npm run build
