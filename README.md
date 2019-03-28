@@ -2,12 +2,12 @@
 
 <img src="https://github.com/webninja1992/angular-d3-chart/blob/master/Angular6-D3.jpg"/>
 
-#Requirements
-npm version>6
+#<h1> Requirements </h1>
+ <p> npm version>6 </p>
 
-#Installation
+#<h1>Installation</h1>
 <p> npm install </p> <br>
 <p> npm start </p>
 
-#Deployment
-npm run build
+#<h1> Deployment </h1>
+<p> npm run build </p>
