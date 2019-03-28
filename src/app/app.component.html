@@ -1,0 +1,30 @@
+<div class="grid-container">
+  <mat-grid-list cols="2" rowHeight="400px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div *ngIf="card.title === 'd3 bubble chart'">
+            <app-d3-bubble-interaction-chart></app-d3-bubble-interaction-chart>
+          </div>
+          <div *ngIf="linechart && card.title === 'line chart'">
+            <canvas id="lineChart">{{ linechart }}</canvas>
+          </div>
+          <div *ngIf="piechart && card.title === 'pie chart'">
+            <canvas id="pieChart">{{ piechart }}</canvas>
+          </div>
+          <div *ngIf="barchart && card.title === 'bar chart'">
+            <canvas id="barChart">{{ barchart }}</canvas>
+          </div>
+          <div *ngIf="d3BarChartData && card.title === 'd3 bar chart'">
+            <app-d3-bar-chart [data]="d3BarChartData"></app-d3-bar-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
